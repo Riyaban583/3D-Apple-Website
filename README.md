@@ -444,38 +444,6 @@ node scripts/optimize-textures.js
 
 
 
-### **Asset Organization**
-
-```
-public/
-├── models/
-│   ├── macbook-14.glb          (5.2 MB)
-│   └── macbook-16.glb          (5.8 MB)
-│
-├── textures/
-│   ├── env-map.hdr             (2.1 MB)
-│   ├── matcap.png              (256 KB)
-│   └── normal-map.jpg          (512 KB)
-│
-└── videos/
-    ├── hero.mp4                (8.5 MB, H.264)
-    ├── feature-1.mp4           (3.2 MB)
-    └── feature-2.mp4           (3.8 MB)
-```
-
-**Video Compression:**
-```bash
-# Using FFmpeg
-ffmpeg -i input.mp4 \
-  -c:v libx264 \
-  -crf 28 \
-  -preset slow \
-  -c:a aac \
-  -b:a 128k \
-  output.mp4
-```
-
----
 
 ## 🎬 Animation System
 
@@ -497,35 +465,7 @@ gsap.to(modelRef.current.rotation, {
 ```
 
 
-## 📚 Best Practices
 
-### **React Three Fiber**
-
-1. **Always use `useFrame` for animations:**
-   ```javascript
-   useFrame((state, delta) => {
-     ref.current.rotation.y += delta;
-   });
-   ```
-
-2. **Memoize geometry and materials:**
-   ```javascript
-   const geometry = useMemo(() => new THREE.BoxGeometry(), []);
-   const material = useMemo(() => new THREE.MeshStandardMaterial(), []);
-   ```
-
-3. **Clean up on unmount:**
-   ```javascript
-   useEffect(() => {
-     return () => {
-       geometry.dispose();
-       material.dispose();
-       texture.dispose();
-     };
-   }, []);
-   ```
-
----
 
 
 ## 🌐 Browser Support
@@ -547,25 +487,6 @@ gsap.to(modelRef.current.rotation, {
 - IntersectionObserver API
 
 **Polyfills:** Not required for modern browsers
-
----
-
-
-
-## 📝 Changelog
-
-### **v1.0.0** (2024-02-03)
-- 🎉 Initial release
-- ✨ 14" & 16" MacBook models
-- 🎬 GSAP ScrollTrigger animations
-- 💡 Studio lighting setup
-- 📱 Fully responsive design
-
-### **v0.9.0** (2024-01-20)
-- 🔧 Beta release
-- 🐛 Bug fixes and optimizations
-
-[View Full Changelog](CHANGELOG.md)
 
 ---
 
