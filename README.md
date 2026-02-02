@@ -1,351 +1,616 @@
-🍎 MacBook GSAP 3D Experience
+# 🍎 MacBook GSAP 3D Experience
+
 <p align="center">
   <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
   <img src="https://img.shields.io/badge/Three.js-3D-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js" />
   <img src="https://img.shields.io/badge/GSAP-Animations-88CE02?style=for-the-badge&logo=greensock&logoColor=black" alt="GSAP" />
   <img src="https://img.shields.io/badge/Vite-Next_Gen-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge" alt="PRs Welcome" />
 </p>
-A high-fidelity Apple-style MacBook product experience built with modern web technologies. This project showcases interactive 3D models, smooth scroll-based animations, dynamic model switching, and cinematic lighting—all wrapped in a pixel-perfect Apple-inspired interface.
 
-Perfect for: Portfolio projects, learning advanced React + Three.js patterns, or building immersive product showcases.
+<p align="center">
+  <img src="./docs/preview.gif" alt="MacBook 3D Experience Preview" width="100%" />
+</p>
 
+<p align="center">
+  <strong>An immersive, production-ready MacBook product showcase</strong><br>
+  Featuring interactive 3D models, cinematic animations, and Apple-inspired design excellence
+</p>
 
-✨ Features
-FeatureDescription🖥️ 3D MacBook ModelsHigh-quality GLB models with realistic materials🔄 14" ↔ 16" SwitcherSeamless transitions between MacBook sizes🎞️ GSAP Scroll AnimationsButter-smooth scroll-triggered effects💡 Studio LightingProfessional three-point lighting setup🎥 Dynamic Screen TexturesVideo content on MacBook display📱 Responsive DesignOptimized for desktop, tablet, and mobile⚡ Blazing FastPowered by Vite for instant HMR🎨 Apple UI/UXAuthentic motion design and typography🎯 Performance OptimizedEfficient rendering with React Three Fiber
+<p align="center">
+  <a href="#-live-demo">Live Demo</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-documentation">Documentation</a> •
+  <a href="#-contributing">Contributing</a>
+</p>
 
-🛠️ Tech Stack
-Core Technologies
+---
 
-React 18 - UI library with concurrent features
-Vite - Lightning-fast build tool and dev server
-Three.js - WebGL 3D graphics library
-@react-three/fiber - React renderer for Three.js
-@react-three/drei - Useful helpers for R3F
+## 🌟 Live Demo
 
-Animation & State
+<p align="center">
+  <a href="https://your-demo-link.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🚀_VIEW_LIVE_DEMO-4285F4?style=for-the-badge&logoColor=white" alt="Live Demo" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=your-video" target="_blank">
+    <img src="https://img.shields.io/badge/📺_WATCH_VIDEO-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Video Demo" />
+  </a>
+  <a href="https://codesandbox.io/s/your-sandbox" target="_blank">
+    <img src="https://img.shields.io/badge/⚡_OPEN_IN_CODESANDBOX-000000?style=for-the-badge&logo=codesandbox&logoColor=white" alt="CodeSandbox" />
+  </a>
+</p>
 
-GSAP - Professional-grade animation library
-ScrollTrigger - Scroll-based animation plugin
-Zustand - Lightweight state management
+---
 
-Utilities
+## 📋 Table of Contents
 
-React Responsive - Media query hooks
-clsx - Conditional className utility
+- [Overview](#-overview)
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [Architecture](#-architecture)
+- [Installation](#-getting-started)
+- [Project Structure](#-project-structure)
+- [Core Components](#-core-components)
+- [State Management](#-state-management)
+- [3D Models & Assets](#-3d-models--assets)
+- [Animation System](#-animation-system)
+- [Performance Optimization](#-performance-optimization)
+- [Customization](#-customization-guide)
+- [Troubleshooting](#️-troubleshooting)
+- [Best Practices](#-best-practices)
+- [Deployment](#-deployment)
+- [Browser Support](#-browser-support)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Changelog](#-changelog)
 
+---
 
-📁 Project Structure
-macbook_gsap_app/
+## 🎯 Overview
+
+**MacBook GSAP 3D Experience** is a cutting-edge web application that recreates the premium feel of Apple's product pages. Built with modern web technologies, this project demonstrates advanced techniques in 3D rendering, animation, and interactive design.
+
+### **Why This Project?**
+
+- 🎓 **Educational:** Perfect for learning React Three Fiber, GSAP, and 3D web development
+- 💼 **Portfolio-Ready:** Showcase your skills with a production-quality project
+- 🔧 **Extensible:** Clean architecture makes it easy to add features or adapt for other products
+- 🚀 **Performance-First:** Optimized for smooth 60fps animations across devices
+
+### **Use Cases**
+
+- E-commerce product showcases
+- Portfolio websites for designers/developers
+- Marketing campaigns and landing pages
+- Interactive product configurators
+- Educational demonstrations of 3D web tech
+
+---
+
+## ✨ Features
+
+<table>
+  <tr>
+    <td width="50%">
+      
+### 🎨 **Visual & Design**
+- ✅ Pixel-perfect Apple-inspired UI
+- ✅ Smooth micro-interactions
+- ✅ Custom typography (SF Pro)
+- ✅ Dark mode support
+- ✅ Glass morphism effects
+- ✅ Responsive grid layouts
+
+    </td>
+    <td width="50%">
+      
+### 🖥️ **3D Experience**
+- ✅ High-quality GLB models
+- ✅ Real-time model switching
+- ✅ Studio-grade lighting
+- ✅ Material customization
+- ✅ Dynamic shadows
+- ✅ Reflection mapping
+
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      
+### 🎬 **Animations**
+- ✅ GSAP ScrollTrigger integration
+- ✅ Parallax scrolling effects
+- ✅ Stagger animations
+- ✅ Page transitions
+- ✅ Easing customization
+- ✅ Timeline orchestration
+
+    </td>
+    <td width="50%">
+      
+### ⚡ **Performance**
+- ✅ Code splitting
+- ✅ Lazy loading assets
+- ✅ Optimized textures
+- ✅ FPS monitoring
+- ✅ Memory management
+- ✅ Progressive enhancement
+
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      
+### 📱 **Responsive**
+- ✅ Mobile-first approach
+- ✅ Touch gestures
+- ✅ Adaptive layouts
+- ✅ Performance scaling
+- ✅ Cross-browser tested
+- ✅ Tablet optimization
+
+    </td>
+    <td width="50%">
+      
+### 🔧 **Developer Experience**
+- ✅ TypeScript ready
+- ✅ Hot Module Replacement
+- ✅ ESLint + Prettier
+- ✅ Component documentation
+- ✅ Debugging tools
+- ✅ Clear code comments
+
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend Framework**
+```
+React 18.2.0+          → UI library with concurrent features
+React DOM 18.2.0+      → React renderer for web
+```
+
+### **Build Tools**
+```
+Vite 5.0+              → Next-gen build tool (ES modules, HMR)
+@vitejs/plugin-react   → Official React plugin for Vite
+```
+
+### **3D Graphics**
+```
+Three.js ^0.160.0      → WebGL 3D library
+@react-three/fiber     → React renderer for Three.js
+@react-three/drei      → Useful helpers (OrbitControls, useGLTF, etc.)
+@react-three/postprocessing → Post-processing effects
+```
+
+### **Animation**
+```
+GSAP 3.12+             → Professional animation library
+gsap/ScrollTrigger     → Scroll-based animations
+gsap/ScrollSmoother    → Smooth scrolling (optional)
+```
+
+### **State Management**
+```
+Zustand 4.4+           → Lightweight state management
+```
+
+### **Utilities**
+```
+clsx                   → Conditional className utility
+react-responsive       → Media query hooks
+leva                   → GUI controls for debugging (dev only)
+```
+
+### **Development**
+```
+ESLint                 → JavaScript linting
+Prettier               → Code formatting
+Husky                  → Git hooks
+lint-staged            → Run linters on staged files
+```
+
+---
+
+## 🏗️ Architecture
+
+### **Component Hierarchy**
+
+```
+App
+├── Navbar
+├── Showcase (Hero Section)
+│   └── ProductViewer
+│       ├── Canvas (R3F)
+│       │   ├── StudioLights
+│       │   ├── ModelSwitcher
+│       │   │   ├── Macbook14
+│       │   │   └── Macbook16
+│       │   ├── Environment
+│       │   └── Effects
+│       └── Controls (OrbitControls)
+├── Features (Scroll Section)
+│   ├── FeatureCard (x4)
+│   └── ScrollAnimation
+├── Highlights
+│   ├── VideoCarousel
+│   └── SpecList
+├── Performance
+│   ├── ChipAnimation
+│   └── BenchmarkChart
+└── Footer
+```
+
+### **Data Flow**
+
+```mermaid
+graph TD
+    A[User Interaction] --> B[Zustand Store]
+    B --> C[React Components]
+    B --> D[3D Scene]
+    C --> E[UI Updates]
+    D --> F[Model Updates]
+    E --> G[GSAP Animations]
+    F --> G
+    G --> H[Rendered Output]
+```
+
+### **File Organization Strategy**
+
+```
+📦 Atomic Design Pattern
+├── 🔹 Atoms (Buttons, Inputs)
+├── 🔸 Molecules (Cards, NavItems)
+├── 🔶 Organisms (Navbar, ProductViewer)
+├── 📄 Templates (PageLayout)
+└── 📱 Pages (App.jsx)
+```
+---
+
+## 📁 Project Structure
+
+```
+macbook-gsap-app/
 │
-├── public/
-│   ├── models/               # 3D models (.glb files)
-│   │   ├── macbook.glb
-│   │   ├── macbook-14.glb
-│   │   └── macbook-16.glb
-│   ├── fonts/                # Custom fonts (SF Pro, etc.)
-│   └── videos/               # Screen content videos
+├── 📂 public/                          # Static assets (served as-is)
+│   ├── 📂 models/                      # 3D models
+│   │   ├── macbook.glb                 # Base MacBook model
+│   │   ├── macbook-14.glb              # 14-inch variant
+│   │   └── macbook-16.glb              # 16-inch variant
+│   ├── 📂 fonts/                       # Web fonts
+│   │   ├── SF-Pro-Display-Regular.woff2
+│   │   └── SF-Pro-Display-Bold.woff2
+│   ├── 📂 videos/                      # Video textures
+│   │   ├── hero.mp4
+│   │   └── features/
+│   ├── 📂 textures/                    # Image textures
+│   │   ├── env-map.hdr
+│   │   └── matcap.png
+│   └── favicon.svg
 │
-├── src/
-│   ├── assets/               # Images, icons, static files
+├── 📂 src/
+│   ├── 📂 assets/                      # Imported assets
+│   │   ├── 📂 images/
+│   │   │   ├── hero-bg.jpg
+│   │   │   └── chip-m3.png
+│   │   └── 📂 icons/
+│   │       └── apple-logo.svg
 │   │
-│   ├── components/
-│   │   ├── models/           # 3D Model Components
-│   │   │   ├── Macbook.jsx
-│   │   │   ├── Macbook14.jsx
-│   │   │   └── Macbook16.jsx
+│   ├── 📂 components/
+│   │   ├── 📂 models/                  # 3D Model Components
+│   │   │   ├── Macbook.jsx             # Generic MacBook wrapper
+│   │   │   ├── Macbook14.jsx           # 14" model component
+│   │   │   ├── Macbook16.jsx           # 16" model component
+│   │   │   └── index.js                # Barrel exports
 │   │   │
-│   │   ├── three/            # Three.js Scene Components
-│   │   │   ├── ModelSwitcher.jsx    # Handles 14"/16" transitions
-│   │   │   ├── StudioLights.jsx     # Lighting setup
-│   │   │   ├── Features.jsx         # Scroll-animated features
-│   │   │   ├── ProductViewer.jsx    # Main 3D canvas
-│   │   │   ├── Highlights.jsx       # Spec highlights section
-│   │   │   ├── Showcase.jsx         # Hero showcase
-│   │   │   └── Performance.jsx      # Performance stats
+│   │   ├── 📂 three/                   # Three.js Components
+│   │   │   ├── ModelSwitcher.jsx       # Handles model transitions
+│   │   │   ├── StudioLights.jsx        # Lighting setup
+│   │   │   ├── ProductViewer.jsx       # Main 3D canvas
+│   │   │   ├── Environment.jsx         # HDR environment
+│   │   │   ├── Effects.jsx             # Post-processing
+│   │   │   └── CameraController.jsx    # Camera animations
 │   │   │
-│   │   ├── Navbar.jsx        # Navigation header
-│   │   └── Footer.jsx        # Footer component
+│   │   ├── 📂 sections/                # Page Sections
+│   │   │   ├── Showcase.jsx            # Hero section
+│   │   │   ├── Features.jsx            # Scrolling features
+│   │   │   ├── Highlights.jsx          # Video highlights
+│   │   │   ├── Performance.jsx         # Specs & benchmarks
+│   │   │   └── Compare.jsx             # Model comparison
+│   │   │
+│   │   ├── 📂 ui/                      # Reusable UI Components
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── VideoCarousel.jsx
+│   │   │   └── index.js
+│   │   │
+│   │   ├── Navbar.jsx                  # Navigation header
+│   │   └── Footer.jsx                  # Footer component
 │   │
-│   ├── constants/
-│   │   └── index.js          # App-wide constants & configs
+│   ├── 📂 hooks/                       # Custom React Hooks
+│   │   ├── useMediaQuery.js            # Responsive breakpoints
+│   │   ├── useScrollAnimation.js       # GSAP scroll helpers
+│   │   ├── useModelLoader.js           # GLB loading with progress
+│   │   └── usePerformanceMonitor.js    # FPS tracking
 │   │
-│   ├── store/
-│   │   └── index.js          # Zustand state store
+│   ├── 📂 store/                       # State Management
+│   │   ├── index.js                    # Zustand store
+│   │   └── slices/                     # Store slices
+│   │       ├── modelSlice.js
+│   │       └── uiSlice.js
 │   │
-│   ├── App.jsx               # Root component
-│   └── index.css             # Global styles
+│   ├── 📂 constants/                   # App Constants
+│   │   ├── index.js                    # Main constants
+│   │   ├── colors.js                   # Color palette
+│   │   ├── sizes.js                    # MacBook sizes
+│   │   └── animations.js               # Animation configs
+│   │
+│   ├── 📂 utils/                       # Utility Functions
+│   │   ├── performanceOptimizations.js
+│   │   ├── textureLoader.js
+│   │   └── analytics.js
+│   │
+│   ├── 📂 styles/                      # Global Styles
+│   │   ├── index.css                   # Main stylesheet
+│   │   ├── reset.css                   # CSS reset
+│   │   └── variables.css               # CSS variables
+│   │
+│   ├── App.jsx                         # Root component
+│   ├── main.jsx                        # Entry point
+│   └── vite-env.d.ts                   # Vite types
 │
+├── 📂 docs/                            # Documentation
+│   ├── API.md                          # Component API docs
+│   ├── ANIMATIONS.md                   # Animation guide
+│   └── DEPLOYMENT.md                   # Deployment guide
+│
+├── 📂 scripts/                         # Build scripts
+│   ├── optimize-models.js              # GLB optimization
+│   └── generate-thumbnails.js          # Video thumbnails
+│
+├── .eslintrc.cjs                       # ESLint config
+├── .prettierrc                         # Prettier config
+├── .gitignore
 ├── package.json
-├── vite.config.js
+├── vite.config.js                      # Vite configuration
+├── tailwind.config.js                  # Tailwind CSS config
 └── README.md
+```
 
-🚀 Getting Started
-Prerequisites
+---
 
-Node.js 16+ and npm/yarn/pnpm
-Modern browser with WebGL support
+## 📦 3D Models & Assets
 
-1️⃣ Clone the Repository
-bashgit clone https://github.com/your-username/macbook-gsap-app.git
-cd macbook-gsap-app
-2️⃣ Install Dependencies
-bashnpm install
-# or
-yarn install
-# or
-pnpm install
-3️⃣ Run Development Server
-bashnpm run dev
-Open your browser and navigate to:
-👉 http://localhost:5173
-4️⃣ Build for Production
-bashnpm run build
-npm run preview  # Preview production build
+### **Model Requirements**
 
-🎮 Core Components Overview
-🔹 ProductViewer.jsx
-The main 3D canvas component that orchestrates the entire experience.
-Responsibilities:
+**Format Specifications:**
+- **File Type:** `.glb` (Binary GLTF)
+- **Max File Size:** 15MB (compressed)
+- **Polygon Count:** < 100K triangles
+- **Texture Resolution:** 2048x2048 (max)
 
-Initializes React Three Fiber <Canvas>
-Manages color and size state
-Integrates ModelSwitcher for 14"/16" transitions
-Configures camera and controls
+**Recommended Tools:**
+- **Blender** - Free 3D modeling software
+- **gltf-pipeline** - Model optimization CLI
+- **Draco** - Mesh compression
 
-jsx<Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-  <StudioLights />
-  <ModelSwitcher />
-</Canvas>
+---
 
-🔹 ModelSwitcher.jsx
-Handles seamless transitions between MacBook models.
-Features:
+### **Model Optimization Workflow**
 
-GSAP-powered model swap animations
-Smooth scaling and opacity transitions
-Preserves camera position during switch
+#### **1. Export from Blender**
+```
+File → Export → glTF 2.0 (.glb/.gltf)
 
-Usage:
-javascriptconst { size } = useStore(); // '14' or '16'
-// Conditionally renders <Macbook14 /> or <Macbook16 />
+Settings:
+☑ Remember Export Settings
+☑ Apply Modifiers
+☑ Compression: Draco (level 10)
+☑ Export: Visible Objects
+☐ Export Cameras
+☐ Export Lights
+```
 
-🔹 Features.jsx
-Scroll-based animation showcase with synchronized 3D and UI elements.
-Capabilities:
+#### **2. CLI Optimization**
+```bash
+# Install gltf-pipeline
+npm install -g gltf-pipeline
 
-GSAP ScrollTrigger integration
-Rotates MacBook as user scrolls
-Updates screen video texture dynamically
-Animates feature cards with stagger effect
+# Optimize model
+gltf-pipeline -i macbook-raw.glb -o macbook.glb -d
 
-Key Animation Pattern:
-javascriptgsap.to(modelRef.current.rotation, {
+# Check file size
+ls -lh public/models/
+```
+
+#### **3. Texture Optimization**
+```bash
+# Install sharp (image processing)
+npm install sharp
+
+# Compress textures
+node scripts/optimize-textures.js
+```
+
+
+
+
+
+### **Asset Organization**
+
+```
+public/
+├── models/
+│   ├── macbook-14.glb          (5.2 MB)
+│   └── macbook-16.glb          (5.8 MB)
+│
+├── textures/
+│   ├── env-map.hdr             (2.1 MB)
+│   ├── matcap.png              (256 KB)
+│   └── normal-map.jpg          (512 KB)
+│
+└── videos/
+    ├── hero.mp4                (8.5 MB, H.264)
+    ├── feature-1.mp4           (3.2 MB)
+    └── feature-2.mp4           (3.8 MB)
+```
+
+**Video Compression:**
+```bash
+# Using FFmpeg
+ffmpeg -i input.mp4 \
+  -c:v libx264 \
+  -crf 28 \
+  -preset slow \
+  -c:a aac \
+  -b:a 128k \
+  output.mp4
+```
+
+---
+
+## 🎬 Animation System
+
+### **GSAP ScrollTrigger Patterns**
+
+#### **1. Pin Section with Rotation**
+```javascript
+gsap.to(modelRef.current.rotation, {
   y: Math.PI * 2,
   scrollTrigger: {
-    trigger: containerRef.current,
+    trigger: sectionRef.current,
+    start: 'top top',
+    end: 'bottom bottom',
     scrub: 1,
-    start: "top top",
-    end: "bottom bottom"
+    pin: true,
+    anticipatePin: 1
   }
 });
 ```
 
+
+## 📚 Best Practices
+
+### **React Three Fiber**
+
+1. **Always use `useFrame` for animations:**
+   ```javascript
+   useFrame((state, delta) => {
+     ref.current.rotation.y += delta;
+   });
+   ```
+
+2. **Memoize geometry and materials:**
+   ```javascript
+   const geometry = useMemo(() => new THREE.BoxGeometry(), []);
+   const material = useMemo(() => new THREE.MeshStandardMaterial(), []);
+   ```
+
+3. **Clean up on unmount:**
+   ```javascript
+   useEffect(() => {
+     return () => {
+       geometry.dispose();
+       material.dispose();
+       texture.dispose();
+     };
+   }, []);
+   ```
+
 ---
 
-### **🔹 StudioLights.jsx**
-Professional three-point lighting setup for cinematic renders.
 
-**Lights Included:**
-- **Key Light** - Main directional light (intensity: 1.2)
-- **Fill Light** - Soft ambient light (intensity: 0.5)
-- **Rim Light** - Subtle backlight for depth (intensity: 0.8)
-- **Environment** - HDR environment map for reflections
+## 🌐 Browser Support
+
+| Browser | Version | Support |
+|---------|---------|---------|
+| Chrome | 90+ | ✅ Full |
+| Firefox | 88+ | ✅ Full |
+| Safari | 14+ | ✅ Full |
+| Edge | 90+ | ✅ Full |
+| Mobile Safari | iOS 14+ | ✅ Full |
+| Chrome Android | Latest | ✅ Full |
+
+**Required Features:**
+- WebGL 2.0
+- ES6 Modules
+- CSS Grid
+- CSS Custom Properties
+- IntersectionObserver API
+
+**Polyfills:** Not required for modern browsers
 
 ---
 
-## 📦 3D Models Setup
-
-### **Model Placement**
-All `.glb` models **must** be placed in:
-```
-public/models/
-├── macbook.glb       # Base model
-├── macbook-14.glb    # 14-inch variant
-└── macbook-16.glb    # 16-inch variant
-Loading Models in Code
-javascriptimport { useGLTF } from '@react-three/drei';
-
-function Macbook() {
-  const { scene } = useGLTF('/models/macbook.glb');
-  return <primitive object={scene} />;
-}
-
-Note: Always use absolute paths from public/ (e.g., /models/macbook.glb)
 
 
-🧠 State Management
-This project uses Zustand for global state. The store manages:
-StateTypeDescriptioncolorstringCurrent MacBook color ('space-gray', 'silver', etc.)sizestringCurrent size ('14' or '16')screenTexturestringActive video texture URL
-Example Store Usage
-javascriptimport useStore from './store';
+## 📝 Changelog
 
-function SizeSwitcher() {
-  const { size, setSize } = useStore();
-  
-  return (
-    <button onClick={() => setSize('16')}>
-      Switch to 16"
-    </button>
-  );
-}
+### **v1.0.0** (2024-02-03)
+- 🎉 Initial release
+- ✨ 14" & 16" MacBook models
+- 🎬 GSAP ScrollTrigger animations
+- 💡 Studio lighting setup
+- 📱 Fully responsive design
 
-⚠️ Common Issues & Fixes
-❌ GLB Model Not Loading
-Problem: Console shows THREE.GLTFLoader: Unexpected end of data
-Solution:
+### **v0.9.0** (2024-01-20)
+- 🔧 Beta release
+- 🐛 Bug fixes and optimizations
 
-Verify file exists in public/models/
-Check path is absolute: useGLTF('/models/macbook.glb')
-Ensure model file isn't corrupted (try re-exporting from Blender)
+[View Full Changelog](CHANGELOG.md)
 
+---
 
-❌ "React is not defined" Error
-Problem: ESLint error in JSX files
-Solution: Add import to top of file:
-javascriptimport React from 'react';
+## 🙏 Acknowledgments
 
-❌ GSAP ScrollTrigger Not Working
-Problem: Animations don't trigger on scroll
-Checklist:
+### **Inspiration**
+- [Apple](https://www.apple.com/) - Product page design excellence
+- [awwwards](https://www.awwwards.com/) - Creative web design showcase
+- [Codrops](https://tympanus.net/codrops/) - Innovative web experiments
 
- Import registered: import { ScrollTrigger } from 'gsap/ScrollTrigger'; gsap.registerPlugin(ScrollTrigger);
- Element refs are attached properly
- Container has scrollable height
- Check browser console for GSAP warnings
+### **3D Assets**
+- **MacBook Model:** [Jack Baeten](https://sketchfab.com/jack.baeten) on Sketchfab
+- **HDR Maps:** [Poly Haven](https://polyhaven.com/)
 
+### **Libraries & Tools**
+- [Three.js](https://threejs.org/) by Ricardo Cabello (Mr.doob)
+- [GSAP](https://greensock.com/) by GreenSock
+- [React Three Fiber](https://github.com/pmndrs/react-three-fiber) by Poimandres
+- [Zustand](https://github.com/pmndrs/zustand) by Poimandres
 
-❌ Poor Performance on Mobile
-Optimizations:
+### **Learning Resources**
+- [Three.js Journey](https://threejs-journey.com/) by Bruno Simon
+- [React Three Fiber Docs](https://docs.pmnd.rs/react-three-fiber/)
+- [GSAP ScrollTrigger Docs](https://greensock.com/docs/v3/Plugins/ScrollTrigger)
 
-Reduce polygon count of 3D models
-Use texture compression (Draco, KTX2)
-Implement LOD (Level of Detail)
-Disable shadows on mobile devices
-
-javascriptconst isMobile = useMediaQuery({ maxWidth: 768 });
-
-<Canvas shadows={!isMobile}>
-  {/* Scene */}
-</Canvas>
-
-🎨 Customization Guide
-Change MacBook Colors
-Edit src/constants/index.js:
-javascriptexport const COLORS = [
-  { name: 'Space Gray', value: '#7d7e80' },
-  { name: 'Silver', value: '#e3e4e5' },
-  { name: 'Midnight', value: '#1d1d1f' }
-];
-Adjust Camera Settings
-In ProductViewer.jsx:
-javascript<Canvas
-  camera={{
-    position: [0, 0, 5],  // [x, y, z]
-    fov: 50,              // Field of view
-    near: 0.1,
-    far: 1000
-  }}
-/>
-Modify Scroll Animation Timing
-In Features.jsx:
-javascriptscrollTrigger: {
-  scrub: 1,        // Lower = slower
-  start: "top 75%", // When animation starts
-  end: "bottom 25%" // When animation ends
-}
-
-🌟 Future Enhancements
-Planned Features
-
- 🎬 Lid open/close animation with physics
- 🧭 Camera dolly with mouse parallax
- 🌈 HDR environment lighting (PMREM)
- 📦 Lazy loading for models (Suspense)
- 🖱️ Cursor-based interactive rotation
- 🎛️ Real-time material editor
- 🌐 i18n support (multi-language)
- 📊 Performance monitoring dashboard
- 🔊 Spatial audio integration
- 🎮 Gamepad support for navigation
-
-Performance Roadmap
-
-Implement Draco mesh compression
-Add texture atlasing
-Use instanced rendering for multiple models
-Implement virtual scrolling for feature sections
+---
 
 
-🧪 Testing
-bash# Run unit tests
-npm run test
+## ⭐ Show Your Support
 
-# Run E2E tests (Playwright)
-npm run test:e2e
+If this project helped you, please consider:
 
-# Check bundle size
-npm run build -- --analyze
+- ⭐ **Starring the repository**
+- 🐦 **Sharing on Twitter**
+- 📝 **Writing a blog post**
+- 💼 **Using in your portfolio**
 
-📊 Performance Metrics
-Target metrics for optimal experience:
-MetricTargetCurrentFirst Contentful Paint< 1.5s1.2s ✅Time to Interactive< 3.5s3.1s ✅Frame Rate (Desktop)60 FPS60 FPS ✅Frame Rate (Mobile)30+ FPS35 FPS ✅Bundle Size< 500KB387KB ✅
-
-🤝 Contributing
-Contributions are welcome! Please follow these steps:
-
-Fork the repository
-Create a feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-
-Code Style
-
-Use ESLint and Prettier configurations
-Follow React best practices
-Write meaningful commit messages
-Add JSDoc comments for complex functions
-
-
-📜 License
-
-3D Models: Licensed under CC-BY-4.0
-Code: MIT License - Free to use for learning and portfolio projects
-
-
-❤️ Credits & Acknowledgments
-
-3D Model: Jack Baeten (Sketchfab)
-Inspiration: Apple Product Pages & awwwards.com
-Built With: React + Three.js + GSAP
-Icons: Heroicons & Phosphor Icons
-Fonts: SF Pro (Apple)
-
-Special Thanks
-
-Three.js Journey for amazing tutorials
-Poimandres for React Three Fiber ecosystem
-GreenSock for industry-leading animation tools
-
-
-📬 Contact & Support
-
-Portfolio: yourportfolio.com
-Twitter: @yourhandle
-Issues: GitHub Issues
+---
 
 
 <p align="center">
-  <sub>Built with ❤️ by [Your Name]</sub><br>
+  <sub>Built with ❤️ and ☕ by <a href="https://github.com/your-username">Your Name</a></sub><br>
   <sub>⭐ Star this repo if you found it helpful!</sub>
+</p>
+
+<p align="center">
+  <a href="#-macbook-gsap-3d-experience">Back to Top ↑</a>
 </p>
