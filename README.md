@@ -486,7 +486,6 @@ gsap.to(modelRef.current.rotation, {
 - CSS Custom Properties
 - IntersectionObserver API
 
-**Polyfills:** Not required for modern browsers
 
 ---
 
